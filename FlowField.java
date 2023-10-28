@@ -83,9 +83,9 @@ public class FlowField
 		}
 	}
 
-	//
+	//********************************************************************************************
 	// Making a time step: adding the force, applying pressure, advecting, and viscosity if chosen
-
+	//********************************************************************************************
 	public void update(int[][]obstacle)
 	{
 		
@@ -179,7 +179,7 @@ public class FlowField
 				canvas.setRGB(i, j, x);
 			}
 
-		File outputfile = new File(name+df.format(time/10)+"."+type);
+		File outputfile = new File(name+df.format(time)+"."+type);
 		try 
 		{  
 			ImageIO.write(canvas, type, outputfile);
